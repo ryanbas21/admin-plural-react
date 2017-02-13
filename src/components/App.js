@@ -10,7 +10,9 @@ class App extends Component {
     );
   }
 }
-App.proptypes = {
+
+App.propTypes = {
   children: PropTypes.object.isRequired
 }
+
 export default App;
