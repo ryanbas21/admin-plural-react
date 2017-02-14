@@ -5,7 +5,7 @@ class CoursesPage extends Component {
     super(props)
     this.state= {
       course : {
-        title: null
+        title: ''
       }
     }
     this.onTitleChange = this.onTitleChange.bind(this)
@@ -16,6 +16,10 @@ class CoursesPage extends Component {
     event.preventDefault()
     const course = this.state.course;
     this.setState({course:course});
+  }
+
+  onClickSave() {
+
   }
   render() {
     return (
