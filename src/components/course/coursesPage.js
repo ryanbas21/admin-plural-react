@@ -18,6 +18,7 @@ class CoursePage extends Component {
   onTitleChange (event) {
     event.preventDefault();
     const course = this.state.course;
+    course.title = event.target.value;
     this.setState({course:course});
   }
 
