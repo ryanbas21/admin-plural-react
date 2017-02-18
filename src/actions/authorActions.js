@@ -3,11 +3,13 @@ import * as types from './actionTypes'
 
 export function loadAuthorsSuccess(authors) {
   return {
-  type: types.LOAD_AUTHORS_SUCCESS, authors}
+  type: types.LOAD_AUTHORS_SUCCESS,
+  authors
+  }
 }
   export function loadAuthors(){
     return dispatch => {
-      return AuthorApi.getALlAuthors().then( authors => {
+      return AuthorApi.getAllAuthors().then( authors => {
         dispatch(loadAuthorsSuccess(authors))
       }).catch((err) => err)
     }
